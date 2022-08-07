@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: oauth-service
+spec:
+  selector:
+    app: oauth-deployment
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

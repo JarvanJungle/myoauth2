@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Doxa Connex 2.0</title>
+</head>
+<body>
+    <div class="login_container">
+        <div class="image_content">
+            <div class="login_image"></div>
+        </div>
+        <div class="login_content">
+            <a href="https://www.doxa-holdings.com" target="_blank" class="doxa_connex_image"></a>
+            <h1 title="Welcome back" class="title">Welcome back</h1>
+            <div class="sub_title">
+                Sign in using your email
+            </div>
+            <form method="post" th:action="@{/login}">
+                <span th:text="${message}"></span>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="username" placeholder="Enter email" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="Password" class="form-control" />
+                    <span class="has-error" th:text="${error}"></span>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                </div>
+
+                <a href="/forgotpassword" class="forgot_password">
+                    Forgot Password?
+                </a>
+
+                <button type="submit">Login</button>
+            </form>
+
+<!--        <div class="register">-->
+<!--            <div>Not a user yet?</div>-->
+<!--            <a href="/pages/register" class="register_now">-->
+<!--                Register Now!-->
+<!--            </a>-->
+<!--        </div>-->
+
+            <div class="footer">
+                <div>
+                    <a href="https://www.doxa-holdings.com/terms-and-conditions" target="_blank"
+                        rel="noopener noreferrer" class="link">
+                        Terms of Use
+                    </a>
+                    |
+                    <a href="https://www.doxa-holdings.com/privacy-policy" target="_blank" rel="noopener noreferrer"
+                        class="link">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div><b>Copyright © 2022 Doxa Holdings International Pte. Ltd.</b></div>
+                <div class="footer_version">v.2.01.01.00.00</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+  http://www.liquibase.org/xml/ns/pro
+  http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+<!--    <include  file="db/liquibase/liquibase-base.xml"/>-->
+    <changeSet id="1" author="noivuduc">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.0-base.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="2" author="liying">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.1-base.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="3" author="noivuduc">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.2-add-missing-column.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="4" author="noivuduc">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.3_company_type.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="5" author="noivuduc">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.4-authorization-code.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="6" author="noivuduc">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.5-reset-password.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="7" author="liying">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.6-add-users-remarks.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="8" author="liying">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.7-add-company-remarks.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="9" author="noivuduc">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.8-rbac.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="10" author="cuongnh">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/0.9-user-avatar.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="11" author="cuongnh">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/1.0-increase_user_name_length.sql"></sqlFile>
+    </changeSet>
+    <changeSet id="12" author="lalitha">
+        <sqlFile dbms="postgresql" path="db/liquibase/changelogs/1.1-add-financial-institution.sql"></sqlFile>
+    </changeSet>
+</databaseChangeLog>
